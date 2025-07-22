@@ -18,16 +18,16 @@ body {
 }
 
 .navbar-brand {
-  color: #e91e63 !important; /* Vibrant rose for brand */
+  color: #800000 !important; /* Vibrant maroon for brand */
   font-weight: 700;
   font-size: 1.6rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.4); /* Subtle rose glow */
+  text-shadow: 0 0 8px rgba(128, 0, 0, 0.4); /* Subtle maroon glow */
   transition: all 0.3s ease-in-out;
 }
 
 .navbar-brand:hover {
-  color: #ff6e8a !important; /* Lighter rose on hover */
-  text-shadow: 0 0 12px rgba(255, 110, 138, 0.6);
+  color: #a04000 !important; /* Lighter maroon/brown on hover */
+  text-shadow: 0 0 12px rgba(160, 64, 0, 0.6);
   transform: scale(1.02);
 }
 
@@ -46,8 +46,8 @@ body {
   height: 3px;
   bottom: -8px;
   left: 0;
-  background-color: #e91e63; /* Rose glow */
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+  background-color: #800000; /* Maroon glow */
+  box-shadow: 0 0 10px rgba(128, 0, 0, 0.5);
   transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -81,15 +81,15 @@ body {
 
 /* Primary Action Button (e.g., in Hero) */
 .hero .btn {
-  background: linear-gradient(45deg, #e91e63, #ff4081); /* Rose to brighter pink gradient */
+  background: linear-gradient(45deg, #800000, #a04000); /* Maroon to brownish-orange gradient */
   color: #ffffff; /* White text on bright button */
-  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4); /* Stronger rose glow shadow */
+  box-shadow: 0 8px 25px rgba(128, 0, 0, 0.4); /* Stronger maroon glow shadow */
 }
 
 .hero .btn:hover {
-  background: linear-gradient(45deg, #ff4081, #e91e63); /* Reverse gradient on hover */
+  background: linear-gradient(45deg, #a04000, #800000); /* Reverse gradient on hover */
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(233, 30, 99, 0.6);
+  box-shadow: 0 12px 35px rgba(128, 0, 0, 0.6);
 }
 
 .hero .btn::before {
@@ -114,22 +114,22 @@ body {
 /* Secondary Button Style (e.g., "plus" on cards) */
 .cta-btn {
   background-color: rgba(0, 0, 0, 0.05); /* Slightly transparent dark for contrast */
-  color: #e91e63; /* Rose text */
+  color: #800000; /* Maroon text */
   padding: 0.7rem 1.4rem;
   border-radius: 5px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Soft 3D shadow */
-  border: 1px solid rgba(233, 30, 99, 0.2); /* Subtle rose border */
+  border: 1px solid rgba(128, 0, 0, 0.2); /* Subtle maroon border */
 }
 
 .cta-btn:hover {
-  background-color: #e91e63; /* Solid rose on hover */
+  background-color: #800000; /* Solid maroon on hover */
   color: #ffffff; /* White text on hover */
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4); /* Stronger rose glow */
-  border-color: #ff4081;
+  box-shadow: 0 6px 15px rgba(128, 0, 0, 0.4); /* Stronger maroon glow */
+  border-color: #a04000;
 }
 
 /* HEADER (Used for general page headers, if different from hero) */
@@ -161,7 +161,7 @@ header h1 {
   font-weight: 700;
   color: #333333; /* Dark grey for heading */
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 10px rgba(233, 30, 99, 0.2); /* Subtle rose glow */
+  text-shadow: 0 0 10px rgba(128, 0, 0, 0.2); /* Subtle maroon glow */
 }
 
 header .lead {
@@ -173,7 +173,7 @@ header .lead {
 
 /* HERO (Specific styling for the main landing page hero - more dramatic) */
 .hero {
-  background: linear-gradient(135deg, #e91e63 0%, #ff4081 100%); /* Rose to brighter pink gradient */
+  background: linear-gradient(135deg, #800000 0%, #a04000 100%); /* Maroon to brownish-orange gradient */
   color: #ffffff; /* White text on bright hero */
   padding: 150px 0;
   text-align: center;
@@ -209,7 +209,7 @@ header .lead {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Keyframe animation for pulsing glow (remains white on rose background) */
+/* Keyframe animation for pulsing glow (remains white on maroon background) */
 @keyframes pulseGlow {
   from {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
@@ -231,15 +231,15 @@ header .lead {
   color: #333333; /* Dark grey for section titles */
   font-weight: 700;
   margin-bottom: 3.5rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2); /* Subtle rose glow */
+  text-shadow: 0 0 8px rgba(128, 0, 0, 0.2); /* Subtle maroon glow */
 }
 
 .product-card {
   background-color: #ffffff; /* White for cards */
-  border: 1px solid rgba(233, 30, 99, 0.1); /* Subtle rose border */
+  border: 1px solid rgba(128, 0, 0, 0.1); /* Subtle maroon border */
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(128, 0, 0, 0.05); /* Lighter shadows */
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   height: 100%;
   display: flex;
@@ -248,8 +248,8 @@ header .lead {
 
 .product-card:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(233, 30, 99, 0.1); /* Stronger hover shadow */
-  border-color: rgba(233, 30, 99, 0.3); /* More vibrant border */
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(128, 0, 0, 0.1); /* Stronger hover shadow */
+  border-color: rgba(128, 0, 0, 0.3); /* More vibrant border */
 }
 
 .product-card img {
@@ -275,11 +275,11 @@ header .lead {
 }
 
 .product-card .card-title {
-  color: #e91e63; /* Rose for card titles */
+  color: #800000; /* Maroon for card titles */
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Subtle glow */
+  text-shadow: 0 0 5px rgba(128, 0, 0, 0.2); /* Subtle glow */
 }
 
 .product-card .card-text {
@@ -315,15 +315,15 @@ header .lead {
   color: #333333;
   font-weight: 700;
   margin-bottom: 3.5rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+  text-shadow: 0 0 8px rgba(128, 0, 0, 0.2);
 }
 
 #pourquoi h5.text-primary {
-  color: #e91e63 !important; /* Accent rose */
+  color: #800000 !important; /* Accent maroon */
   font-weight: 600;
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 6px rgba(233, 30, 99, 0.3);
+  text-shadow: 0 0 6px rgba(128, 0, 0, 0.3);
 }
 
 #pourquoi p {
@@ -341,7 +341,7 @@ header .lead {
   color: #333333;
   font-weight: 700;
   margin-bottom: 2rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+  text-shadow: 0 0 8px rgba(128, 0, 0, 0.2);
 }
 
 .section-content p {
@@ -351,8 +351,8 @@ header .lead {
 }
 
 .section-content strong {
-  color: #e91e63; /* Make strong text stand out with rose */
-  text-shadow: 0 0 2px rgba(233, 30, 99, 0.1);
+  color: #800000; /* Make strong text stand out with maroon */
+  text-shadow: 0 0 2px rgba(128, 0, 0, 0.1);
 }
 
 .section-content ul {
@@ -371,19 +371,19 @@ header .lead {
 
 .section-content ul li::before {
   content: '→';
-  color: #e91e63; /* Rose color for bullet */
+  color: #800000; /* Maroon color for bullet */
   font-weight: bold;
   position: absolute;
   left: 0;
   top: 0;
   font-size: 1.3em;
   transform: translateY(-2px);
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.3); /* Glow for bullet */
+  text-shadow: 0 0 5px rgba(128, 0, 0, 0.3); /* Glow for bullet */
 }
 
 .section-content img {
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(128, 0, 0, 0.05); /* Lighter shadows */
   transition: transform 0.3s ease;
 }
 
@@ -416,11 +416,11 @@ header .lead {
 }
 
 #contact h5.ct {
-  color: #e91e63; /* Rose for contact title */
+  color: #800000; /* Maroon for contact title */
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.8rem;
-  text-shadow: 0 0 10px rgba(233, 30, 99, 0.3); /* Footer title glow */
+  text-shadow: 0 0 10px rgba(128, 0, 0, 0.3); /* Footer title glow */
 }
 
 #contact p {
@@ -430,16 +430,16 @@ header .lead {
 }
 
 #contact a {
-  color: #e91e63; /* Accent rose for footer links */
+  color: #800000; /* Accent maroon for footer links */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 #contact a:hover {
-  color: #ff4081; /* Lighter rose on hover */
+  color: #a04000; /* Lighter maroon/brown on hover */
   text-decoration: underline;
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+  text-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
 }
 
 /* General utility classes override for consistency */
@@ -449,6 +449,6 @@ header .lead {
 
 h2.text-primary,
 h5.text-primary {
-  color: #e91e63 !important; /* Force primary accent rose for consistency */
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Add glow to primary text */
+  color: #800000 !important; /* Force primary accent maroon for consistency */
+  text-shadow: 0 0 5px rgba(128, 0, 0, 0.2); /* Add glow to primary text */
 }
