@@ -1,0 +1,454 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8; /* Soft off-white for main background */
+  color: #333333; /* Dark grey for main text */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect retained */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtlety */
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #e91e63 !important; /* Vibrant rose for brand */
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 0 0 8px rgba(233, 30, 99, 0.4); /* Subtle rose glow */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #ff6e8a !important; /* Lighter rose on hover */
+  text-shadow: 0 0 12px rgba(255, 110, 138, 0.6);
+  transform: scale(1.02);
+}
+
+.nav-link {
+  color: #666666 !important; /* Muted dark grey for nav links */
+  font-weight: 500;
+  margin-left: 1.8rem;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -8px;
+  left: 0;
+  background-color: #e91e63; /* Rose glow */
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after,
+.nav-item .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #333333 !important; /* Darker grey on hover */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle dark text shadow */
+}
+
+/* BUTTONS */
+/* General Button Style */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Primary Action Button (e.g., in Hero) */
+.hero .btn {
+  background: linear-gradient(45deg, #e91e63, #ff4081); /* Rose to brighter pink gradient */
+  color: #ffffff; /* White text on bright button */
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4); /* Stronger rose glow shadow */
+}
+
+.hero .btn:hover {
+  background: linear-gradient(45deg, #ff4081, #e91e63); /* Reverse gradient on hover */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(233, 30, 99, 0.6);
+}
+
+.hero .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3); /* Slightly stronger white inner glow */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.hero .btn:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* Secondary Button Style (e.g., "plus" on cards) */
+.cta-btn {
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly transparent dark for contrast */
+  color: #e91e63; /* Rose text */
+  padding: 0.7rem 1.4rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Soft 3D shadow */
+  border: 1px solid rgba(233, 30, 99, 0.2); /* Subtle rose border */
+}
+
+.cta-btn:hover {
+  background-color: #e91e63; /* Solid rose on hover */
+  color: #ffffff; /* White text on hover */
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4); /* Stronger rose glow */
+  border-color: #ff4081;
+}
+
+/* HEADER (Used for general page headers, if different from hero) */
+header {
+  background-color: #ffffff; /* White background for header */
+  padding: 100px 0 70px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before { /* Degrade/texture overlay using SVG for consistent noise */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>') repeat;
+  background-size: 150px;
+  opacity: 0.05; /* Less prominent on light background */
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333333; /* Dark grey for heading */
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.2); /* Subtle rose glow */
+}
+
+header .lead {
+  font-size: 1.35rem;
+  color: #666666; /* Muted dark grey */
+  max-width: 900px;
+  margin: 0.5rem auto 0;
+}
+
+/* HERO (Specific styling for the main landing page hero - more dramatic) */
+.hero {
+  background: linear-gradient(135deg, #e91e63 0%, #ff4081 100%); /* Rose to brighter pink gradient */
+  color: #ffffff; /* White text on bright hero */
+  padding: 150px 0;
+  text-align: center;
+  box-shadow: inset 0 -10px 40px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.2); /* Lighter shadows */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before { /* Degrade texture for hero */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>') repeat;
+  background-size: 200px;
+  opacity: 0.1; /* Less prominent on light background */
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6); /* Stronger white glow */
+  animation: pulseGlow 2s infinite alternate; /* Pulsing glow effect */
+}
+
+.hero .lead {
+  font-size: 1.6rem;
+  opacity: 0.95;
+  margin-top: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe animation for pulsing glow (remains white on rose background) */
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 35px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* PRODUITS / SERVICES (Cards Section) */
+#produits,
+.section-content {
+  background-color: #f8f8f8; /* Consistent light background */
+  padding: 6rem 0;
+}
+
+#produits h2,
+.section-content h2 {
+  color: #333333; /* Dark grey for section titles */
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2); /* Subtle rose glow */
+}
+
+.product-card {
+  background-color: #ffffff; /* White for cards */
+  border: 1px solid rgba(233, 30, 99, 0.1); /* Subtle rose border */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(233, 30, 99, 0.1); /* Stronger hover shadow */
+  border-color: rgba(233, 30, 99, 0.3); /* More vibrant border */
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  filter: brightness(1) grayscale(0.1); /* Slightly muted for light theme */
+  transition: filter 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+  filter: brightness(1) grayscale(0); /* Full color on hover */
+}
+
+.product-card .card-body {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card .card-title {
+  color: #e91e63; /* Rose for card titles */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Subtle glow */
+}
+
+.product-card .card-text {
+  color: #666666; /* Muted dark grey for card text */
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  font-size: 1.05rem;
+}
+
+/* SECTION POURQUOI (Why Us Section) */
+#pourquoi {
+  background-color: #ffffff; /* White background */
+  color: #333333;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#pourquoi::before { /* Degrade/texture overlay */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>') repeat;
+  background-size: 150px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+#pourquoi h2 {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+}
+
+#pourquoi h5.text-primary {
+  color: #e91e63 !important; /* Accent rose */
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgba(233, 30, 99, 0.3);
+}
+
+#pourquoi p {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+/* SECTION CONTENU (About Us Page specific content) */
+.section-content {
+  padding: 6rem 0;
+  background-color: #f8f8f8; /* Consistent with body */
+}
+
+.section-content h2 {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+}
+
+.section-content p {
+  color: #666666;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.section-content strong {
+  color: #e91e63; /* Make strong text stand out with rose */
+  text-shadow: 0 0 2px rgba(233, 30, 99, 0.1);
+}
+
+.section-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+.section-content ul li {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.section-content ul li::before {
+  content: '→';
+  color: #e91e63; /* Rose color for bullet */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3em;
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(233, 30, 99, 0.3); /* Glow for bullet */
+}
+
+.section-content img {
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
+  transition: transform 0.3s ease;
+}
+
+.section-content img:hover {
+  transform: scale(1.01);
+}
+
+/* FOOTER */
+#contact {
+  background-color: #f0f0f0; /* Slightly darker off-white for footer */
+  color: #333333;
+  padding: 4rem 0;
+  text-align: center;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before { /* Degrade texture */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>') repeat;
+  background-size: 100px;
+  opacity: 0.03; /* Very subtle on light background */
+  pointer-events: none;
+}
+
+#contact h5.ct {
+  color: #e91e63; /* Rose for contact title */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.3); /* Footer title glow */
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #666666; /* Muted dark grey for footer text */
+  margin: 0.7rem 0;
+}
+
+#contact a {
+  color: #e91e63; /* Accent rose for footer links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#contact a:hover {
+  color: #ff4081; /* Lighter rose on hover */
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+}
+
+/* General utility classes override for consistency */
+.text-center {
+  color: #333333; /* Default text in centered sections to dark grey */
+}
+
+h2.text-primary,
+h5.text-primary {
+  color: #e91e63 !important; /* Force primary accent rose for consistency */
+  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Add glow to primary text */
+}
