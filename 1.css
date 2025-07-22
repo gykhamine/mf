@@ -157,7 +157,7 @@ header::before { /* Degrade/texture overlay using SVG for consistent noise */
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #333333; /* Dark grey for heading */
   margin-bottom: 0.75rem;
@@ -165,7 +165,7 @@ header h1 {
 }
 
 header .lead {
-  font-size: 1.35rem;
+  font-size: 1rem;
   color: #666666; /* Muted dark grey */
   max-width: 900px;
   margin: 0.5rem auto 0;
@@ -196,14 +196,14 @@ header .lead {
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: 800;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6); /* Stronger white glow */
   animation: pulseGlow 2s infinite alternate; /* Pulsing glow effect */
 }
 
 .hero .lead {
-  font-size: 1.6rem;
+  font-size: 1rem;
   opacity: 0.95;
   margin-top: 1.5rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
